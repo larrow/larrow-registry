@@ -1,3 +1,6 @@
+require 'httparty'
+require 'jwt'
+
 module Larrow
   module Registry
     include HTTParty
