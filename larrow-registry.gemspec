@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["fsword"]
   spec.email         = ["li.jianye@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{ruby lib to access docker registry}
+  spec.description   = %q{This gem is used by shelter which is a non-enterprise docker private registry}
+  spec.homepage      = "https://github.com/larrow/larrow-registry"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -32,4 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "minitest", "~> 5.0"
+  spec.add_dependency "jwt", "~> 1.5"
 end
