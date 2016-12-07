@@ -1,5 +1,6 @@
 require 'httparty'
 require 'jwt'
+require 'base32'
 
 module Larrow
   module Registry
