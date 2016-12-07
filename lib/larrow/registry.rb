@@ -34,9 +34,9 @@ module Larrow
         iss: 'registry-token-issuer',
         sub: (sub || 'system-service'),
         aud: 'token-service',
-        exp: 10.minutes.from_now.to_i,
-        nbf: 1.minutes.ago.to_i,
-        iat: Time.now.to_i,
+        exp: ( Time.new + 10 * 60 ).to_i,
+        nbf: ( Time.new - 60 ).to_i,
+        iat: Time.new.to_i,
         jti: SecureRandom.uuid,
         access: []
       }
