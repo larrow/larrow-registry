@@ -5,7 +5,7 @@ require 'base32'
 module Larrow
   module Registry
     include HTTParty
-    base_uri 'http://proxy'
+    base_uri 'http://registry'
 
     def repositories
       get('/v2/_catalog', headers: headers_for_scope('registry:catalog:*'))['repositories']
