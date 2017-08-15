@@ -80,7 +80,8 @@ module Larrow
     end
 
     def rsa_private_key
-      @private_key ||= OpenSSL::PKey::RSA.new(File.read('./config/private_key.pem'))
+      private_file = ENV['REGISTRY_PRIVATE_FILE'] || './config/private_key.pem'
+      @private_key ||= OpenSSL::PKey::RSA.new(File.read(private_file))
     end
 
     module_function :repositories, :tags, :delete_tag, :delete_manifests, :token, :manifests, :headers_for_scope, :rsa_private_key
